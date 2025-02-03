@@ -15,6 +15,10 @@ echo Workspace: $GITHUB_WORKSPACE
 echo Repository: $repo_dir
 echo Documentation: $doc_dir
 
+echo | pwd 
+echo | ls -l
+
+
 echo ::endgroup::
 
 # The actions doesn't depends on any images,
