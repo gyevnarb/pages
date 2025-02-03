@@ -42,7 +42,7 @@ echo ::endgroup::
 if [ ! -z "$INPUT_REQUIREMENTS_PATH" ] ; then
     echo ::group:: Installing dependencies declared by $INPUT_REQUIREMENTS_PATH
     if [ -f "$INPUT_REQUIREMENTS_PATH" ]; then
-        pip3 install -r sphinx myst-parser carla
+        pip3 install sphinx myst-parser carla
         pip3 install -r requirements.txt
     else
         echo No $INPUT_REQUIREMENTS_PATH found, skipped
