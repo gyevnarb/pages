@@ -15,10 +15,6 @@ echo Workspace: $GITHUB_WORKSPACE
 echo Repository: $repo_dir
 echo Documentation: $doc_dir
 
-echo | pwd 
-echo | ls -l
-
-
 echo ::endgroup::
 
 # The actions doesn't depends on any images,
@@ -46,6 +42,7 @@ echo ::endgroup::
 if [ ! -z "$INPUT_REQUIREMENTS_PATH" ] ; then
     echo ::group:: Installing dependencies declared by $INPUT_REQUIREMENTS_PATH
     if [ -f "$INPUT_REQUIREMENTS_PATH" ]; then
+        echo Input requirements path: $INPUT_REQUIREMENTS_PATH
         pip3 install -r "$INPUT_REQUIREMENTS_PATH"
     else
         echo No $INPUT_REQUIREMENTS_PATH found, skipped
