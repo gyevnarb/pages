@@ -42,8 +42,7 @@ echo ::endgroup::
 if [ ! -z "$INPUT_REQUIREMENTS_PATH" ] ; then
     echo ::group:: Installing dependencies declared by $INPUT_REQUIREMENTS_PATH
     if [ -f "$INPUT_REQUIREMENTS_PATH" ]; then
-        echo Input requirements path: $INPUT_REQUIREMENTS_PATH
-        pip3 install -r "$INPUT_REQUIREMENTS_PATH"
+        pip3 install -r "docs/requirements.txt"
     else
         echo No $INPUT_REQUIREMENTS_PATH found, skipped
     fi
