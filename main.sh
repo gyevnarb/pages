@@ -50,15 +50,15 @@ if [ ! -z "$INPUT_REQUIREMENTS_PATH" ] ; then
     echo ::endgroup::
 fi
 
-if [ ! -z "$INPUT_PYPROJECT_EXTRAS" ] ; then
-    echo ::group:: Installing dependencies declared by pyproject.toml[$INPUT_PYPROJECT_EXTRAS]
-    if [ -f "pyproject.toml" ]; then
-        pip3 install .[$INPUT_PYPROJECT_EXTRAS]
-    else
-        echo No pyproject.toml found, skipped
-    fi
-    echo ::endgroup::
-fi
+# if [ ! -z "$INPUT_PYPROJECT_EXTRAS" ] ; then
+#     echo ::group:: Installing dependencies declared by pyproject.toml[$INPUT_PYPROJECT_EXTRAS]
+#     if [ -f "pyproject.toml" ]; then
+#         pip3 install .[$INPUT_PYPROJECT_EXTRAS]
+#     else
+#         echo No pyproject.toml found, skipped
+#     fi
+#     echo ::endgroup::
+# fi
 
 echo ::group:: Preparations for incremental build
 
